@@ -1,4 +1,6 @@
-package Cozumler;
+ package Cozumler;
+
+import java.util.Scanner;
 
 public class soru7 {
 
@@ -24,6 +26,34 @@ public class soru7 {
 	​
 	    ugly number
 	     */
+		
+	        Scanner scan = new Scanner(System.in); 
+	        System.out.print("lutfen bir sayi giriniz ");
+	       
+	        int sayi = scan.nextInt();
+	        uglyNumberSorgulama(sayi);
+	    }
+	    
+	    public static void uglyNumberSorgulama(int sayi)
+	    {
+	        int num = sayi;
+	       
+	        while(num != 1)
+	        {
+	            if (num % 2 == 0)
+	                num /= 2;
+	            else if (num % 3 == 0)
+	                num /= 3;
+	            else if (num % 5 == 0)
+	                num /= 5;    
+	            else
+	            {
+	                System.out.println(sayi + " bir Ugly Number degildir");
+	               
+	                return;
+	            }    
+	        }
+	        System.out.println(sayi + " bir Ugly Number dir");
 	}
 
 }
