@@ -35,36 +35,36 @@ public class soru6 {
 		Scanner scan=new Scanner(System.in);
 		System.out.println("bir harf giriniz");
 		String harf=scan.next();
-	
-		if ((harf.charAt(0)>='A' && harf.charAt(0)<='Z') || (harf.charAt(0)>='a' && harf.charAt(0)<='z') ) {
-			switch (harf.toLowerCase()) {
-			case "a":
-				System.out.println(harf+" sesli bir harfdir");
-				break;
-			case "e":
-				System.out.println(harf+" sesli bir harfdir");
-				break;
-			case "i":
-				System.out.println(harf+" sesli bir harfdir");
-				break;
-			case "o":
-				System.out.println(harf+" sesli bir harfdir");
-				break;
-			case "u":
-				System.out.println(harf+" sesli bir harfdir");
-				break;
 
-			default:
-				System.out.println("girdiginiz harf sessiz harftir");
-				break;
+		if (harf.length() == 1 && ((harf.charAt(0) >= 'A' && harf.charAt(0) <= 'Z') || (harf.charAt(0) >= 'a' && harf.charAt(0) <= 'z'))) {
+			switch (harf.toLowerCase()) {
+				case "a":
+					System.out.println(harf + " bit sesli harftir");
+
+					break;
+				case "e":
+					System.out.println(harf + " bit sesli harftir");
+					break;
+				case "i":
+					System.out.println(harf + " bit sesli harftir");
+					break;
+				case "o":
+					System.out.println(harf + " bit sesli harftir");
+					break;
+				case "u":
+					System.out.println(harf + " bit sesli harftir");
+					break;
+
+				default:
+					System.out.println(harf + " sessiz bir harftir");
+					break;
 			}
-		}else {
-			System.out.println("girilen deger bir harf degildir");
+		} else {
+			System.out.println("girdiginiz bir harf degildir veya birdfen fazla karakter girdiniz lutfen bir harf giriniz");
 		}
-		
-		
-		
-		
+
+
+
 	}
 
 }
